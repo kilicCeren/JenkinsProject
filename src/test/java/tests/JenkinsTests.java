@@ -33,7 +33,7 @@ public class JenkinsTests {
     @Test
     void Test13(){ assertTrue(true);}
     @Test
-    void Test14(){ assertTrue(true);
-    }
-
+    void Test14(){ assertTrue(true);}
+    @Test
+    void Test15() { assertTrue(true);}
 }
