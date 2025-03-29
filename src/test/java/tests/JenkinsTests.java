@@ -2,6 +2,7 @@ package tests;
 
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 public class JenkinsTests {
@@ -41,4 +42,6 @@ public class JenkinsTests {
     void Test10(){
         assertTrue(true);
     }
+    @Test
+    void Test11(){ assertFalse(false);}
 }
