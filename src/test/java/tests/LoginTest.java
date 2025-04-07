@@ -1,11 +1,22 @@
 package tests;
 
+import io.qameta.allure.*;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
-public class JenkinsTests {
+@Epic("Login Tests")
+@Feature("Valid Login")
+public class LoginTest {
+
+    @Test(description = "Geçerli bilgilerle login testi")
+    @Severity(SeverityLevel.CRITICAL)
+    @Story("Geçerli kullanıcı ile giriş yapılabilmeli")
+    @Description("Doğru username ve password ile giriş kontrolü")
+    public void validLoginTest() {
+    }
+
     @Test
     void Test1(){ assertTrue(true);}
     @Test
@@ -52,4 +63,7 @@ public class JenkinsTests {
     void Test22() { assertTrue(true);}
     @Test
     void Test23() { assertTrue(true);}
-}
+    @Test
+    void Test24() { assertTrue(true);}
+    }
+
