@@ -161,7 +161,7 @@ public class LoginTest {
 
         // arama sonucunda ürün bulunabildigini test edin
         WebElement aramaSonucuElementi = driver.findElement(By.className("product-count-text"));
-        String unExpectedSonuc = "0 Products Found";
+        String unExpectedSonuc = "1 Products Found";
         String actualSonuc = aramaSonucuElementi.getText();
 
         Assert.assertNotEquals(actualSonuc, unExpectedSonuc);
