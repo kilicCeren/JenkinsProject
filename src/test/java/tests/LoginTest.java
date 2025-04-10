@@ -23,89 +23,150 @@ public class LoginTest {
     @Story("Geçerli kullanıcı ile giriş yapılabilmeli")
     @Description("Doğru username ve password ile giriş kontrolü")
     public void validLoginTest() {
-
         assertTrue(true);
     }
 
     @Test
-    void Test1(){ assertTrue(true);}
-    @Test
-    void Test2(){ assertTrue(true);}
-    @Test
-    void Test3(){ assertTrue(true);}
-    @Test
-    void Test4(){ assertTrue(true);}
-    @Test
-    void Test5(){ assertTrue(true);}
-    @Test
-    void Test6(){assertTrue(true);}
-    @Test
-    void Test7(){ assertTrue(true);}
-    @Test
-    void Test8(){ assertTrue(true);}
-    @Test
-    void Test9(){assertTrue(true);}
-    @Test
-    void Test10(){ assertTrue(true);}
-    @Test
-    void Test11(){ assertFalse(false);}
-    @Test
-    void Test12(){ assertFalse(false);}
-    @Test
-    void Test13(){ assertTrue(true);}
-    @Test
-    void Test14(){ assertTrue(true);}
-    @Test
-    void Test15() { assertTrue(true);}
-    @Test
-    void Test16() { assertTrue(true);}
-    @Test
-    void Test17() { assertTrue(true);}
-    @Test
-    void Test18() { assertTrue(true);}
-    @Test
-    void Test19() { assertTrue(true);}
-    @Test
-    void Test20() { assertTrue(true);}
-    @Test
-    void Test21() { assertTrue(true);}
-    @Test
-    void Test22() { assertTrue(true);}
-    @Test
-    void Test23() { assertTrue(true);}
-    @Test
-    void Test24() { assertTrue(true);}
-    @Test
-    public void test01() {
+    void Test1() {
+        assertTrue(true);
+    }
 
+    @Test
+    void Test2() {
+        assertTrue(true);
+    }
+
+    @Test
+    void Test3() {
+        assertTrue(true);
+    }
+
+    @Test
+    void Test4() {
+        assertTrue(true);
+    }
+
+    @Test
+    void Test5() {
+        assertTrue(true);
+    }
+
+    @Test
+    void Test6() {
+        assertTrue(true);
+    }
+
+    @Test
+    void Test7() {
+        assertTrue(true);
+    }
+
+    @Test
+    void Test8() {
+        assertTrue(true);
+    }
+
+    @Test
+    void Test9() {
+        assertTrue(true);
+    }
+
+    @Test
+    void Test10() {
+        assertTrue(true);
+    }
+
+    @Test
+    void Test11() {
+        assertTrue(false);
+    }
+
+    @Test
+    void Test12() {
+        assertTrue(false);
+    }
+
+    @Test
+    void Test13() {
+        assertTrue(true);
+    }
+
+    @Test
+    void Test14() {
+        assertTrue(true);
+    }
+
+    @Test
+    void Test15() {
+        assertTrue(true);
+    }
+
+    @Test
+    void Test16() {
+        assertTrue(true);
+    }
+
+    @Test
+    void Test17() {
+        assertTrue(true);
+    }
+
+    @Test
+    void Test18() {
+        assertTrue(true);
+    }
+
+    @Test
+    void Test19() {
+        assertTrue(true);
+    }
+
+    @Test
+    void Test20() {
+        assertTrue(true);
+    }
+
+    @Test
+    void Test21() {
+        assertTrue(true);
+    }
+
+    @Test
+    void Test22() {
+        assertTrue(true);
+    }
+
+    @Test
+    void Test23() {
+        assertTrue(true);
+    }
+
+    @Test
+    void Test24() {
+        assertTrue(true);
+    }
+
+    @Test
+    @Step("Test Search functionality on the page")
+    public void test01() {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         driver.get("https://www.testotomasyonu.com");
 
-        // phone icin arama yapin
+        // phone için arama yapın
         WebElement aramaKutusu = driver.findElement(By.id("global-search"));
         aramaKutusu.sendKeys("phone" + Keys.ENTER);
 
-        // arama sonucunda urun bulunabildigini test edin
-
+        // arama sonucunda ürün bulunabildigini test edin
         WebElement aramaSonucuElementi = driver.findElement(By.className("product-count-text"));
-
         String unExpectedSonuc = "0 Products Found";
         String actualSonuc = aramaSonucuElementi.getText();
 
         Assert.assertNotEquals(actualSonuc, unExpectedSonuc);
-        /*
-            JUnit Assertions ile 2 kucuk fark var
-            1- Class ismi Assertions degil Assert
-            2- JUnit'de once expected, sonra actual yaziliyordu
-               TestNG'de once actual, sonra expected yaziliyor
-         */
 
-
-        // driver'i kapatin
+        // driver'ı kapatın
         driver.quit();
     }
-    }
-
+}
